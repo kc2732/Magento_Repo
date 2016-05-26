@@ -1,0 +1,61 @@
+<?php $posts = $this->getPosts(); ?>
+
+<div id="messages_product_view">
+    <?php Mage::app()->getLayout()->getMessagesBlock()->setMessages(Mage::getSingleton('customer/session')->getMessages(true));?>
+    <?php echo Mage::app()->getLayout()->getMessagesBlock()->getGroupedHtml();?>
+</div>
+
+
+<div class="blog_content">
+    <div class="blog_header" data-parallax = "scroll" data-image-src = "<?php echo $this->getSkinUrl('images/blog_header.jpg');?>">
+        <div class="content">
+            <div class="header_blog_date">
+                TYPE OF POST - 10.06.2016
+            </div>
+            <h1>The top 5 reasons to wearinkkas</h1>
+            <span class="cta">
+                <a href="#" class="btn-cta">READ MORE</a>
+            </span>
+        </div>
+    </div>
+<?php echo $this->getChildHtml('blog_newsletter');?>
+    <div class="col-md-9 blog-content-section blog-mobile-posts">
+<?php $i=0; foreach ($posts as $post): $i++;?>
+
+	    <div class="blog_div">
+		    <div class="<?php echo ($i%2) ? 'blog_img col-md-8 eql' : 'blog_img col-md-4 col-md-push-8 eql';?>">
+                <div class="table_div">
+                    <div class="table_cell_div">
+			            <div class="row"><?php echo $post->getPostContent();?></div>
+                    </div>
+                </div>
+		    </div>
+
+		    <div class="<?php echo ($i%2) ? 'blog_img_description eql col-md-4' : 'blog_img_description eql col-md-8 col-md-pull-4';?>">
+			    <div class="table_div">
+				    <div class="table_cell_div">
+					    <div class="row"> 
+						    <div class="blog_date">
+							    TYPE OF POST - <?php echo $post->getCreatedTime();?> 
+						    </div>
+						    <h2><?php echo $post->getTitle();?></h2>	
+						    <span class="go_link">
+							    <a href="<?php echo $post->getAddress();?>"><i class="fa fa-times"></i><span>READ MORE</span> <i class="fa fa-times"></i> </a>
+						    </span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		    <i class="clear_0"></i>
+	    </div>
+<?php endforeach; ?>
+    </div>
+</div>
+<?php echo $this->getChildHtml('aw_blog_comments_toolbar');?>
+<script>
+(function($){
+    $("[data-parallax=scroll]").each(function(){
+            $(this).css({"background-image": "url(" + $(this).data("image-src") + ")"}).jarallax();
+    });  
+})(jQuery);
+</script>

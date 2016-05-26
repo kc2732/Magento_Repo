@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Apptrian_Facebook_Pixel</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL 3.0)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Adds Facebook Pixel with standard events on appropriate pages. Passes W3C validation. Easy to install and use.</summary>
+    <description>Apptrian Facebook Pixel Extension for Magento adds Facebook Pixel on CMS pages (including home page), category pages, product pages, catalog search pages, catalog advanced search pages, customer registration page, cart page, checkout page (default Magento one but also IWD One Page Checkout and IDEV OneStepCheckout - others can be easily supported), checkout success page, and wishlist page. Optionally Facebook Pixel block can be added to any other Magento page or any other extension page (blogs, form pages, etc.) via xml layout updates.</description>
+    <notes>Initial release.</notes>
+    <authors><author><name>Apptrian</name><user>apptrian</user><email>apptrian@yahoo.com</email></author></authors>
+    <date>2016-05-03</date>
+    <time>21:29:14</time>
+    <contents><target name="magecommunity"><dir name="Apptrian"><dir name="FacebookPixel"><dir name="Block"><dir name="Adminhtml"><file name="About.php" hash="50252d7279e670db6b55becb51bf4972"/><file name="Info.php" hash="6d198b2b2adcb85fd5d0b5f24bf30f34"/></dir><file name="Code.php" hash="e3499a4b7ffe0bac0df1ad2a60bd562d"/></dir><dir name="Helper"><file name="Data.php" hash="ce582ef825fb7071ad52da24ddd703f6"/></dir><dir name="Model"><dir name="Config"><file name="Pixelid.php" hash="628b51cbabd8539a92c9b04d621a731c"/></dir></dir><dir name="etc"><file name="config.xml" hash="ed0b1cba402da2dc0445fd40b29aa280"/><file name="system.xml" hash="864da78b1a9174f70e7ecf0873017cdb"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="apptrian_facebookpixel.xml" hash="dae666fe98a79ae417786d1a5eaec929"/></dir><dir name="template"><dir name="apptrian"><dir name="facebookpixel"><file name="code.phtml" hash="4bfcaae5b88ac9820a2633af629ba329"/></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Apptrian_FacebookPixel.xml" hash="70949175d38bd066823f7b31b2a0a53e"/></dir></target><target name="magelocale"><dir name="en_US"><file name="Apptrian_FacebookPixel.csv" hash="1918e6bffdadf5063923338d2fb30fcd"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>8.0.0</max></php></required></dependencies>
+</package>
